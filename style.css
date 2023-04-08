@@ -1,0 +1,611 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* если не прописать тегу бади флекс, то в селекторе all не будет работаь flex grow */
+.body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* значение ширины картинки не будет больше щширины экрана. В данном случае это для мобилы */
+img {
+    max-width: 100%;
+}
+
+.all {
+    flex-grow: 1;
+}
+
+.header {
+    background: #213B7E;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: calc(50% - 1268px / 2);
+    padding-right: calc(50% - 1268px / 2);
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.menu_link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+    padding: 28px 18px;
+    display: block;
+}
+
+.menu_link:hover {
+    color: #EA5D21;
+}
+
+.logo:hover {
+    -webkit-animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: flip-horizontal-bottom 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes flip-horizontal-bottom {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+    }
+}
+
+@keyframes flip-horizontal-bottom {
+    0% {
+        -webkit-transform: rotateX(0);
+        transform: rotateX(0);
+    }
+
+    100% {
+        -webkit-transform: rotateX(-180deg);
+        transform: rotateX(-180deg);
+    }
+}
+
+
+.menu_link_active {
+    color: #213B7E;
+    background-color: white;
+    text-decoration: none;
+}
+
+.button {
+    width: 153px;
+    height: 50px;
+    background: #EA5D21;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: 3s;
+}
+
+.button:hover {
+    color: #EA5D21;
+    background-color: white;
+}
+
+
+.content {
+    margin-top: 33px;
+    padding-left: calc(50% - 911px / 2);
+    padding-right: calc(50% - 911px / 2);
+    margin-bottom: 187px;
+    position: relative;
+}
+
+.title {
+    margin-bottom: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    align-items: center;
+    color: #000000;
+}
+
+.content_info {
+    display: flex;
+    justify-content: space-between;
+    gap: 127px;
+}
+
+.content_article {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.about_text {
+    font-family: 'Roboto';
+    width: 634px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+em {
+    color: #EA5D21;
+}
+
+.subtitle {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.heading {
+    margin-top: 53px;
+    font-family: 'Lobster';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    color: #646464;
+}
+
+
+
+.block {
+
+    display: none;
+}
+
+.visible {
+    width: 500px;
+    height: 418px;
+    background-color: #FFFFFF;
+    position: absolute;
+    top: 40px;
+    margin-left: 205px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 26px;
+    border: 1px solid #213B7E;
+}
+
+
+
+.enterSait {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+    margin-bottom: 36px;
+}
+
+.registration {
+    margin-bottom: 56px;
+}
+
+.inputStyle {
+    width: 444px;
+    height: 55px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #808080;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.footer {
+    background: #213B7E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.footer_content {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.content_students {
+    padding-left: calc(50% - 1202px / 2);
+    padding-right: calc(50% - 1202px / 2);
+    margin-bottom: 519px;
+}
+
+.title_students {
+    text-align: left;
+    margin-top: 37px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 36px;
+    color: #000000;
+}
+
+.students {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 24px;
+}
+
+.student {
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+    position: relative;
+}
+
+.student_new {
+    position: absolute;
+    top: -12px;
+    right: -13px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    background: #3AA828;
+    border-radius: 20px;
+    padding: 1px 2px 1px 5px;
+}
+
+.content_about {
+    padding-left: calc(50% - 820px / 2);
+    padding-right: calc(50% - 820px / 2);
+    margin-bottom: 313px;
+}
+
+.title_course {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    margin-top: 33px;
+    margin-bottom: 25px;
+
+}
+
+.content_contacts {
+    padding-left: calc(50% - 1268px / 2);
+    padding-right: calc(50% - 1268px / 2);
+}
+
+.watch_video {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.title_contacts {
+    margin-top: 33px;
+    margin-left: 286px;
+    margin-bottom: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.adress_all {
+    margin-left: 288px;
+    margin-top: 15px;
+    margin-bottom: 420px;
+}
+
+.our_contacts {
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.adress {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+
+    color: #000000;
+}
+
+.phone_number {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    line-height: 80px;
+}
+
+/* MY PAGE START */
+.myPageTitle {
+    margin-top: 25px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    align-items: center;
+    color: #000000;
+}
+
+.myPageRef {
+    text-decoration: none;
+    color: black;
+}
+
+.mainMyPage {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.myPageText {
+    width: auto;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.subtitleMyPage:hover::after {
+    content: "можно увидеть одновременное применение псевдокласса и псевдоэлемента!";
+}
+
+.container {
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+
+}
+
+.inline {
+    padding: 16px;
+}
+
+.fa-solid {
+    background: -webkit-gradient(linear, left top, left bottom, from(red), to(forestgreen));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.newColor {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(149, 255, 0)), to(rgb(34, 60, 139)));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.newColor1 {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 0, 255)), to(rgb(139, 134, 34)));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.newColor2 {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(17, 0, 255)), to(rgb(139, 34, 34)));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .menu {
+        margin-left: 0px;
+    }
+
+    .menu_link {
+        font-size: 18px;
+        padding: 20px 14px;
+    }
+
+    .content {
+        padding-left: calc(50% - 736px / 2);
+        padding-right: calc(50% - 736px / 2);
+    }
+
+    .content_info {
+        align-items: center;
+    }
+
+    .about_text {
+        width: 100%;
+    }
+
+    .content_section {
+        width: 70%;
+    }
+
+    .students {
+        flex-wrap: wrap;
+    }
+
+    .content_students {
+        padding-left: calc(50% - 736px / 2);
+        padding-right: calc(50% - 736px / 2);
+    }
+
+    .content_contacts {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .map {
+        width: auto;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}
+
+@media (max-width: 350px) {
+    .header {
+        padding-left: 16px;
+        padding-right: 0;
+
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .content {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .content_info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .content_section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about_text {
+        width: auto;
+    }
+
+    .content_students {
+        margin-bottom: 100px;
+    }
+
+    .title_students {
+        text-align: center;
+    }
+
+    .students {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .student_new {
+
+        top: -12px;
+        right: 44px;
+    }
+
+    .title_course {
+        text-align: center;
+    }
+
+    .watch_video {
+        text-align: center;
+    }
+
+    .content_about {
+        margin-bottom: 100px;
+    }
+
+    .content_contacts {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .map {
+        width: auto;
+        margin-left: 0px;
+    }
+
+    .adress_all {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .title_contacts {
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+        margin-top: 22px;
+        margin-bottom: 22px;
+    }
+
+    .our_contacts {
+        margin-top: 12px;
+    }
+}
